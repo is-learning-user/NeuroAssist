@@ -4,5 +4,4 @@ __pycache__/
 .venv/
 data/eegmat/*.edf
 data/eegmat/*.csv
-outputs/*
 !outputs/.gitkeep

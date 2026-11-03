@@ -1,0 +1,213 @@
+{
+  "method": "12s rest calibration reserved; do not score calibration segments; only new participants in test",
+  "selected_on_train_cv": {
+    "features": "enhanced_logratio",
+    "model": "svm_rbf",
+    "mean": 0.788111111111111,
+    "scores": [
+      0.8305555555555555,
+      0.75,
+      0.7266666666666667,
+      0.8283333333333334,
+      0.8049999999999999
+    ]
+  },
+  "top_cv": [
+    {
+      "features": "enhanced_logratio",
+      "model": "svm_rbf",
+      "mean": 0.788111111111111,
+      "scores": [
+        0.8305555555555555,
+        0.75,
+        0.7266666666666667,
+        0.8283333333333334,
+        0.8049999999999999
+      ]
+    },
+    {
+      "features": "enhanced_delta",
+      "model": "svm_rbf",
+      "mean": 0.7833888888888889,
+      "scores": [
+        0.8361111111111111,
+        0.7375,
+        0.7333333333333334,
+        0.8216666666666667,
+        0.7883333333333333
+      ]
+    },
+    {
+      "features": "enhanced_delta",
+      "model": "random_forest",
+      "mean": 0.7691666666666667,
+      "scores": [
+        0.7611111111111111,
+        0.726388888888889,
+        0.7116666666666667,
+        0.8616666666666666,
+        0.7849999999999999
+      ]
+    },
+    {
+      "features": "enhanced_logratio",
+      "model": "random_forest",
+      "mean": 0.7691666666666667,
+      "scores": [
+        0.7611111111111111,
+        0.726388888888889,
+        0.7116666666666667,
+        0.8616666666666666,
+        0.7849999999999999
+      ]
+    },
+    {
+      "features": "enhanced_delta",
+      "model": "svm_linear",
+      "mean": 0.7275555555555555,
+      "scores": [
+        0.7013888888888888,
+        0.6680555555555555,
+        0.65,
+        0.7916666666666666,
+        0.8266666666666667
+      ]
+    },
+    {
+      "features": "enhanced_logratio",
+      "model": "logistic",
+      "mean": 0.7266666666666667,
+      "scores": [
+        0.7069444444444445,
+        0.7013888888888888,
+        0.655,
+        0.7949999999999999,
+        0.7749999999999999
+      ]
+    },
+    {
+      "features": "enhanced_delta",
+      "model": "logistic",
+      "mean": 0.7240555555555556,
+      "scores": [
+        0.7,
+        0.6736111111111112,
+        0.6566666666666667,
+        0.7933333333333333,
+        0.7966666666666666
+      ]
+    },
+    {
+      "features": "enhanced_logratio",
+      "model": "svm_linear",
+      "mean": 0.7178333333333333,
+      "scores": [
+        0.6958333333333333,
+        0.675,
+        0.6433333333333333,
+        0.7716666666666667,
+        0.8033333333333333
+      ]
+    },
+    {
+      "features": "original_delta",
+      "model": "svm_rbf",
+      "mean": 0.7176666666666666,
+      "scores": [
+        0.7749999999999999,
+        0.7166666666666667,
+        0.6383333333333333,
+        0.6816666666666666,
+        0.7766666666666666
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "svm_rbf",
+      "mean": 0.7153888888888889,
+      "scores": [
+        0.7361111111111112,
+        0.6458333333333333,
+        0.76,
+        0.6566666666666667,
+        0.7783333333333333
+      ]
+    }
+  ],
+  "test_window": {
+    "accuracy": 0.7078189300411523,
+    "balanced_accuracy": 0.7277777777777779,
+    "f1_task": 0.6757990867579908,
+    "confusion_matrix_rest_task": [
+      [
+        98,
+        10
+      ],
+      [
+        61,
+        74
+      ]
+    ]
+  },
+  "test_session": {
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6666666666666666,
+    "f1_task": 0.5714285714285714,
+    "confusion_matrix_rest_task": [
+      [
+        8,
+        1
+      ],
+      [
+        5,
+        4
+      ]
+    ]
+  },
+  "train_subjects": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22",
+    "23",
+    "24",
+    "25",
+    "27",
+    "28",
+    "29",
+    "32",
+    "33",
+    "34"
+  ],
+  "test_subjects": [
+    "08",
+    "12",
+    "13",
+    "16",
+    "21",
+    "26",
+    "30",
+    "31",
+    "35"
+  ],
+  "timing_sec": 12.223541498184204,
+  "limitations": [
+    "Calibration uses ground-truth rest period; no deployment without such a protocol.",
+    "Prior exploratory use of same held-out subjects means test score not an untouched confirmatory estimate.",
+    "Rest vs arithmetic is confounded by experimental conditions."
+  ]
+}

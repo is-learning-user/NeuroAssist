@@ -1,0 +1,184 @@
+{
+  "data_integrity": "NEMAR nm000109 v1.0.0 BIDS release; downloaded archive supplied by user; per-file original SHA256 not independently verified",
+  "dataset": "NEMAR EEGMAT nm000109 v1.0.0 (BIDS conversion of PhysioNet EEGMAT)",
+  "experiment": "rest vs arithmetic, NOT universal mental workload",
+  "subjects": 36,
+  "windows": 1080,
+  "window_seconds": 4.0,
+  "max_seconds_per_condition": 60.0,
+  "train_subjects": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22",
+    "23",
+    "24",
+    "25",
+    "27",
+    "28",
+    "29",
+    "32",
+    "33",
+    "34"
+  ],
+  "test_subjects": [
+    "08",
+    "12",
+    "13",
+    "16",
+    "21",
+    "26",
+    "30",
+    "31",
+    "35"
+  ],
+  "n_train_windows": 810,
+  "n_test_windows": 270,
+  "classes": {
+    "0": "rest",
+    "1": "mental arithmetic"
+  },
+  "models": {
+    "dummy": {
+      "window_level": {
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "f1_task": 0.0,
+        "confusion_matrix_rest_task": [
+          [
+            135,
+            0
+          ],
+          [
+            135,
+            0
+          ]
+        ]
+      },
+      "session_level": {
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "f1_task": 0.0,
+        "confusion_matrix_rest_task": [
+          [
+            9,
+            0
+          ],
+          [
+            9,
+            0
+          ]
+        ]
+      }
+    },
+    "logistic": {
+      "window_level": {
+        "accuracy": 0.562962962962963,
+        "balanced_accuracy": 0.5629629629629629,
+        "f1_task": 0.5845070422535211,
+        "confusion_matrix_rest_task": [
+          [
+            69,
+            66
+          ],
+          [
+            52,
+            83
+          ]
+        ]
+      },
+      "session_level": {
+        "accuracy": 0.6111111111111112,
+        "balanced_accuracy": 0.6111111111111112,
+        "f1_task": 0.631578947368421,
+        "confusion_matrix_rest_task": [
+          [
+            5,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      }
+    },
+    "random_forest": {
+      "window_level": {
+        "accuracy": 0.6111111111111112,
+        "balanced_accuracy": 0.6111111111111112,
+        "f1_task": 0.6416382252559727,
+        "confusion_matrix_rest_task": [
+          [
+            71,
+            64
+          ],
+          [
+            41,
+            94
+          ]
+        ]
+      },
+      "session_level": {
+        "accuracy": 0.6111111111111112,
+        "balanced_accuracy": 0.6111111111111112,
+        "f1_task": 0.631578947368421,
+        "confusion_matrix_rest_task": [
+          [
+            5,
+            4
+          ],
+          [
+            3,
+            6
+          ]
+        ]
+      }
+    }
+  },
+  "selection_cv_training_only": {
+    "logistic": {
+      "mean": 0.6371111111111112,
+      "std": 0.05769909171889269,
+      "fold_scores": [
+        0.5777777777777777,
+        0.6277777777777778,
+        0.5733333333333333,
+        0.6933333333333334,
+        0.7133333333333334
+      ]
+    },
+    "random_forest": {
+      "mean": 0.66,
+      "std": 0.051337662155142565,
+      "fold_scores": [
+        0.65,
+        0.6833333333333333,
+        0.6066666666666667,
+        0.6133333333333333,
+        0.7466666666666667
+      ]
+    }
+  },
+  "selected_model_by_training_cv": "random_forest",
+  "limits": [
+    "One subject-held-out split; scores depend on which subjects are held out.",
+    "Winner selected via CV on training participants; held-out metrics have sampling uncertainty.",
+    "No per-second cognitive-workload ground truth.",
+    "Data are offline preprocessed recordings, not a live validated interface."
+  ]
+}

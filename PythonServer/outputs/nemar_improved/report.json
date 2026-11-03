@@ -1,0 +1,320 @@
+{
+  "dataset": "EEGMAT NEMAR nm000109 v1.0.0",
+  "task": "rest vs arithmetic",
+  "protocol": "All feature/model candidates selected using 5-fold GroupKFold over training subjects only; original fixed held-out subjects 9/36 evaluated once.",
+  "train_subjects": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22",
+    "23",
+    "24",
+    "25",
+    "27",
+    "28",
+    "29",
+    "32",
+    "33",
+    "34"
+  ],
+  "test_subjects": [
+    "08",
+    "12",
+    "13",
+    "16",
+    "21",
+    "26",
+    "30",
+    "31",
+    "35"
+  ],
+  "feature_sets": {
+    "original": 133,
+    "enhanced": 259
+  },
+  "candidates": [
+    {
+      "features": "enhanced",
+      "model": "svm_rbf_C1",
+      "cv_balanced_accuracy_mean": 0.7195555555555555,
+      "cv_balanced_accuracy_sd": 0.04563191432471653,
+      "cv_fold_scores": [
+        0.75,
+        0.6611111111111112,
+        0.72,
+        0.6799999999999999,
+        0.7866666666666666
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "svm_rbf_C10",
+      "cv_balanced_accuracy_mean": 0.7017777777777778,
+      "cv_balanced_accuracy_sd": 0.04335099355234327,
+      "cv_fold_scores": [
+        0.6888888888888889,
+        0.7,
+        0.6466666666666667,
+        0.6933333333333334,
+        0.78
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "logistic_C0.1",
+      "cv_balanced_accuracy_mean": 0.6982222222222222,
+      "cv_balanced_accuracy_sd": 0.05032536115427928,
+      "cv_fold_scores": [
+        0.6833333333333333,
+        0.6611111111111111,
+        0.6533333333333333,
+        0.7,
+        0.7933333333333333
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "random_forest",
+      "cv_balanced_accuracy_mean": 0.6762222222222223,
+      "cv_balanced_accuracy_sd": 0.05903587526158342,
+      "cv_fold_scores": [
+        0.7333333333333334,
+        0.6944444444444444,
+        0.6133333333333333,
+        0.6,
+        0.74
+      ]
+    },
+    {
+      "features": "original",
+      "model": "svm_rbf_C1",
+      "cv_balanced_accuracy_mean": 0.6742222222222222,
+      "cv_balanced_accuracy_sd": 0.06605048574133776,
+      "cv_fold_scores": [
+        0.6555555555555556,
+        0.7222222222222222,
+        0.5733333333333334,
+        0.6533333333333333,
+        0.7666666666666666
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "logistic_C1",
+      "cv_balanced_accuracy_mean": 0.6691111111111112,
+      "cv_balanced_accuracy_sd": 0.06493453493450532,
+      "cv_fold_scores": [
+        0.6333333333333333,
+        0.6055555555555556,
+        0.66,
+        0.6533333333333333,
+        0.7933333333333333
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "svm_linear_C0.1",
+      "cv_balanced_accuracy_mean": 0.6686666666666667,
+      "cv_balanced_accuracy_sd": 0.06408482033626109,
+      "cv_fold_scores": [
+        0.6111111111111112,
+        0.6055555555555556,
+        0.6533333333333333,
+        0.6933333333333334,
+        0.78
+      ]
+    },
+    {
+      "features": "original",
+      "model": "svm_rbf_C10",
+      "cv_balanced_accuracy_mean": 0.6648888888888889,
+      "cv_balanced_accuracy_sd": 0.03906689419728963,
+      "cv_fold_scores": [
+        0.6388888888888888,
+        0.6722222222222223,
+        0.6066666666666667,
+        0.6866666666666666,
+        0.72
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "shrinkage_LDA",
+      "cv_balanced_accuracy_mean": 0.6566666666666666,
+      "cv_balanced_accuracy_sd": 0.06474260527868496,
+      "cv_fold_scores": [
+        0.6055555555555556,
+        0.5777777777777777,
+        0.6466666666666667,
+        0.6933333333333334,
+        0.76
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "svm_rbf_C0.1",
+      "cv_balanced_accuracy_mean": 0.6511111111111111,
+      "cv_balanced_accuracy_sd": 0.05365182679572541,
+      "cv_fold_scores": [
+        0.6611111111111111,
+        0.6944444444444444,
+        0.6,
+        0.58,
+        0.72
+      ]
+    },
+    {
+      "features": "enhanced",
+      "model": "extra_trees",
+      "cv_balanced_accuracy_mean": 0.6508888888888889,
+      "cv_balanced_accuracy_sd": 0.05457082836682961,
+      "cv_fold_scores": [
+        0.6777777777777778,
+        0.6833333333333333,
+        0.5933333333333334,
+        0.58,
+        0.72
+      ]
+    },
+    {
+      "features": "original",
+      "model": "logistic_C0.1",
+      "cv_balanced_accuracy_mean": 0.6482222222222223,
+      "cv_balanced_accuracy_sd": 0.07191078148530411,
+      "cv_fold_scores": [
+        0.5777777777777777,
+        0.65,
+        0.56,
+        0.7066666666666667,
+        0.7466666666666666
+      ]
+    },
+    {
+      "features": "original",
+      "model": "svm_linear_C0.1",
+      "cv_balanced_accuracy_mean": 0.6457777777777778,
+      "cv_balanced_accuracy_sd": 0.057376383492827865,
+      "cv_fold_scores": [
+        0.6,
+        0.6222222222222222,
+        0.58,
+        0.7266666666666667,
+        0.7
+      ]
+    },
+    {
+      "features": "original",
+      "model": "svm_rbf_C0.1",
+      "cv_balanced_accuracy_mean": 0.6448888888888888,
+      "cv_balanced_accuracy_sd": 0.05943187821487845,
+      "cv_fold_scores": [
+        0.6388888888888888,
+        0.638888888888889,
+        0.56,
+        0.64,
+        0.7466666666666666
+      ]
+    },
+    {
+      "features": "original",
+      "model": "random_forest",
+      "cv_balanced_accuracy_mean": 0.6448888888888888,
+      "cv_balanced_accuracy_sd": 0.0505407792813919,
+      "cv_fold_scores": [
+        0.6388888888888888,
+        0.6388888888888888,
+        0.5933333333333333,
+        0.6133333333333333,
+        0.74
+      ]
+    },
+    {
+      "features": "original",
+      "model": "extra_trees",
+      "cv_balanced_accuracy_mean": 0.638888888888889,
+      "cv_balanced_accuracy_sd": 0.054596160494495775,
+      "cv_fold_scores": [
+        0.6722222222222223,
+        0.6222222222222222,
+        0.5733333333333334,
+        0.6,
+        0.7266666666666667
+      ]
+    },
+    {
+      "features": "original",
+      "model": "logistic_C1",
+      "cv_balanced_accuracy_mean": 0.6371111111111112,
+      "cv_balanced_accuracy_sd": 0.05769909171889269,
+      "cv_fold_scores": [
+        0.5777777777777777,
+        0.6277777777777778,
+        0.5733333333333333,
+        0.6933333333333334,
+        0.7133333333333334
+      ]
+    },
+    {
+      "features": "original",
+      "model": "shrinkage_LDA",
+      "cv_balanced_accuracy_mean": 0.6362222222222222,
+      "cv_balanced_accuracy_sd": 0.07452102197399996,
+      "cv_fold_scores": [
+        0.5666666666666667,
+        0.6277777777777778,
+        0.5466666666666666,
+        0.7,
+        0.74
+      ]
+    }
+  ],
+  "selected": {
+    "features": "enhanced",
+    "model": "svm_rbf_C1",
+    "cv_balanced_accuracy_mean": 0.7195555555555555,
+    "cv_balanced_accuracy_sd": 0.04563191432471653,
+    "cv_fold_scores": [
+      0.75,
+      0.6611111111111112,
+      0.72,
+      0.6799999999999999,
+      0.7866666666666666
+    ]
+  },
+  "heldout": {
+    "accuracy": 0.5481481481481482,
+    "balanced_accuracy": 0.5481481481481482,
+    "f1_task": 0.5793103448275863,
+    "confusion_matrix_rest_task": [
+      [
+        64,
+        71
+      ],
+      [
+        51,
+        84
+      ]
+    ]
+  },
+  "original_heldout_selected_cv_model_balanced_accuracy": 0.6111111111111112,
+  "limitations": [
+    "Test participant sample is only 9 people; no reliable population generalization claim.",
+    "Labels describe experimental condition, not numeric cognitive load.",
+    "Candidate testing may still exhibit selection bias; no test-driven iteration accepted."
+  ],
+  "elapsed_seconds": 10.0
+}
