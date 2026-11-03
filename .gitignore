@@ -1,0 +1,20 @@
+# Unity generated files
+UnityProject/Library/
+UnityProject/Temp/
+UnityProject/Obj/
+UnityProject/Logs/
+UnityProject/Build/
+UnityProject/Builds/
+UnityProject/UserSettings/
+UnityProject/.vs/
+# Python caches, environments, outputs
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+PythonServer/.venv/
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db

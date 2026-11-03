@@ -1,0 +1,144 @@
+/* NeuroAssist / Air. All dimensions are logical panel pixels.
+   Native TextCore text, individual icons and actual buttons; no screen textures.
+   Main-screen height budget is 854 = status 50 + body 688 + dock 96 + home 20.
+   Every button's theme margins, borders and minimum size are explicitly reset. */
+.root { flex-grow: 1; background-color: #eff3f9; color: #18253c; overflow: hidden; }
+.root Label { margin: 0; padding: 0; flex-shrink: 0; -unity-text-align: upper-left; }
+.root .na-button {
+    margin: 0; padding: 0; min-width: 0; min-height: 0; flex-shrink: 0;
+    border-width: 0; border-radius: 0; background-image: none; background-color: transparent;
+    color: #18253c; -unity-text-align: middle-center; white-space: normal;
+}
+.root .na-button:hover { background-color: rgba(223,234,252,0.8); }
+.root .na-button:active { background-color: #dce8f9; }
+.root .na-button:focus { border-width: 2px; border-color: #6a9dff; }
+.root .ambient-halo { position: absolute; width: 980px; height: 980px; left: -350px; top: 180px; border-radius: 490px; background-color: #e5edf9; }
+.root .frame { flex-grow: 1; padding: 20px 32px 12px 32px; }
+.root .topbar { height: 64px; flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-between; }
+.root .brand { font-size: 25px; letter-spacing: 2px; color: #182840; }
+.root .sub-brand { font-size: 15px; margin-top: 5px; color: #77869c; }
+.root .top-actions { flex-direction: row; align-items: center; }
+.root .top-status { font-size: 14px; color: #148362; background-color: #e0f4ec; border-radius: 20px; padding: 10px 17px; }
+.root .top-status.offline { color: #6b7890; background-color: #e5eaf3; }
+.root .compact-button { background-color: white; color: #1769ee; height: 38px; padding: 0 14px; margin-left: 12px; border-radius: 19px; font-size: 14px; }
+.root .dashboard { flex-grow: 1; min-width: 0; min-height: 0; flex-direction: row; align-items: center; justify-content: center; }
+.root .phone-side { width: 414px; height: 874px; margin-right: 70px; flex-shrink: 0; }
+.root .phone-shadow { position: absolute; left: -30px; top: 8px; width: 474px; height: 914px; background-image: resource("phone_shadow"); -unity-background-scale-mode: stretch-to-fill; }
+.root .phone-outer { width: 414px; height: 874px; padding: 8px; border-width: 2px; border-top-color: #6e7782; border-right-color: #232a35; border-bottom-color: #232a35; border-left-color: #98a0a8; border-radius: 61px; background-color: #101419; flex-shrink: 0; }
+.root .phone-inner { flex-grow: 1; min-height: 0; padding: 0 18px; border-radius: 51px; overflow: hidden; background-color: #f1f6fc; background-image: resource("wallpaper"); -unity-background-scale-mode: stretch-to-fill; }
+.root .status-line { height: 50px; flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 19px; }
+.root .status-time { font-size: 15px; color: #101720; }
+.root .dynamic-island { position: absolute; left: 50%; margin-left: -60px; top: 9px; width: 120px; height: 31px; border-radius: 19px; background-color: #030507; justify-content: center; align-items: flex-end; padding-right: 14px; }
+.root .camera-lens { width: 8px; height: 8px; border-radius: 4px; border-width: 2px; border-color: #101b35; background-color: #102244; }
+.root .status-icons { width: 66px; height: 17px; flex-shrink: 0; }
+.root .phone-content { flex-grow: 1; flex-shrink: 1; min-height: 0; min-width: 0; padding-top: 6px; }
+.root .work-banner { height: 84px; flex-shrink: 0; flex-direction: row; align-items: center; background-color: #243f63; background-image: resource("banner_fill"); -unity-background-scale-mode: stretch-to-fill; border-radius: 20px; padding: 12px; margin-bottom: 14px; }
+.root .banner-icon { width: 45px; height: 45px; margin-right: 10px; flex-shrink: 0; }
+.root .banner-text { flex-grow: 1; min-width: 0; }
+.root .banner-title { font-size: 17px; color: white; }
+.root .banner-subtitle { font-size: 10.5px; color: #e2eaf6; margin-top: 4px; }
+.root .banner-avatar { width: 39px; height: 39px; border-radius: 20px; background-color: #69809f; justify-content: center; align-items: center; margin-left: 5px; flex-shrink: 0; }
+.root .avatar-text { color: white; font-size: 15px; }
+.root .app-grid-full { height: 210px; flex-shrink: 0; }
+.root .app-row { flex-direction: row; flex-wrap: nowrap; height: 105px; flex-shrink: 0; }
+.root .app-slot { width: 25%; height: 102px; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 9px; border-radius: 17px; }
+.root .app-icon { width: 66px; height: 66px; flex-shrink: 0; }
+.root .app-caption { font-size: 13px; color: #23314a; margin-top: 6px; -unity-text-align: middle-center; }
+.root .icon-holder { position: relative; flex-shrink: 0; }
+.root .badge { position: absolute; right: -5px; top: -5px; width: 23px; height: 23px; border-radius: 12px; background-color: #ff414d; border-width: 1px; border-color: #ff7e85; color: white; font-size: 13px; -unity-text-align: middle-center; }
+.root .badge-large { width: 32px; height: 32px; border-radius: 17px; font-size: 19px; right: -7px; top: -8px; }
+.root .section-row { height: 40px; margin-top: 6px; flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 4px; }
+.root .section-title { font-size: 15px; color: #1b2943; }
+.root .link { height: 32px; padding: 0 4px; font-size: 14px; color: #1672ff; border-radius: 8px; }
+.root .notification { height: 98px; margin-bottom: 10px; padding: 12px; border-radius: 20px; flex-direction: row; align-items: flex-start; background-color: rgba(255,255,255,0.92); border-width: 1px; border-color: #ffffff; }
+.root .notification-icon { width: 40px; height: 40px; margin-right: 11px; flex-shrink: 0; }
+.root .notification-copy { flex-grow: 1; flex-shrink: 1; min-width: 0; }
+.root .notification-meta { font-size: 11px; color: #63738c; }
+.root .notification-title { font-size: 13px; margin-top: 2px; color: #172137; }
+.root .notification-preview { font-size: 12px; margin-top: 3px; color: #53677f; white-space: normal; }
+.root .notification-chevron { font-size: 22px; color: #8c99af; margin-left: 4px; margin-top: -5px; }
+.root .dock { height: 82px; margin-top: 10px; margin-bottom: 4px; padding: 0 8px; flex-shrink: 0; flex-direction: row; align-items: center; justify-content: space-around; background-color: rgba(255,255,255,0.66); border-radius: 28px; border-width: 1px; border-color: rgba(255,255,255,0.95); }
+.root .dock-button { width: 69px; height: 69px; align-items: center; justify-content: center; border-radius: 19px; }
+.root .dock-image { width: 59px; height: 59px; }
+.root .home-indicator-area { height: 20px; align-items: center; justify-content: center; flex-shrink: 0; }
+.root .home-indicator { width: 128px; height: 4px; border-radius: 3px; background-color: #202838; }
+/* Two explicit rows: children never depend on wrapping or default Button margins. */
+.root .focus-content { padding-top: 18px; }
+.root .focus-heading-row { height: 72px; flex-direction: row; align-items: center; justify-content: space-between; flex-shrink: 0; }
+.root .focus-greeting { font-size: 16px; color: #6c7f99; }
+.root .focus-name { font-size: 34px; color: #152039; margin-top: 0; }
+.root .focus-return { height: 44px; width: 164px; flex-direction: row; align-items: center; justify-content: center; border-radius: 24px; background-color: #ffffff; border-width: 1px; border-color: #dae6ff; }
+.root .return-icon { width: 21px; height: 21px; margin-right: 7px; }
+.root .return-label { color: #1769ff; font-size: 12px; }
+.root .chevron { font-size: 25px; color: #8996ae; margin-left: 9px; }
+.root .focus-subtitle { height: 62px; font-size: 17px; color: #6c7f99; white-space: normal; margin-top: 8px; margin-bottom: 12px; }
+.root .focus-grid { flex-shrink: 0; }
+.root .focus-row { flex-direction: row; flex-wrap: nowrap; height: 180px; flex-shrink: 0; }
+.root .focus-row-last { margin-top: 16px; }
+.root .focus-tile { flex-basis: 0; flex-grow: 1; flex-shrink: 1; min-width: 0; height: 180px; flex-direction: column; align-items: center; justify-content: center; border-radius: 28px; border-width: 1px; border-color: rgba(255,255,255,0.95); background-color: rgba(255,255,255,0.86); }
+.root .focus-tile.tile-first { margin-right: 16px; }
+.root .focus-tile-icon { width: 122px; height: 122px; }
+.root .focus-caption { font-size: 18px; color: #18243d; margin-top: 9px; }
+.root .focus-notification { height: 112px; margin-top: 22px; padding: 15px; flex-direction: row; align-items: center; background-color: rgba(255,255,255,0.94); border-radius: 26px; border-width: 1px; border-color: white; }
+.root .focus-notification-icon { width: 57px; height: 57px; margin-right: 15px; flex-shrink: 0; }
+.root .focus-notification-title { font-size: 17px; color: #1b2948; }
+.root .focus-notification-sub { font-size: 13px; margin-top: 5px; color: #6b7e99; }
+.root .allapps-button { height: 64px; margin-top: 16px; flex-direction: row; align-items: center; justify-content: center; border-radius: 26px; background-color: rgba(255,255,255,0.94); border-width: 1px; border-color: white; }
+.root .allapps-icon { width: 26px; height: 26px; margin-right: 13px; }
+.root .allapps-label { font-size: 18px; color: #126bff; }
+.root .allapps-button .chevron { position: absolute; right: 20px; }
+/* Quiet companion panel: no scroll bars, same type and surface palette. */
+.root .panel { width: 430px; height: 748px; flex-shrink: 0; padding: 26px; border-radius: 30px; background-color: rgba(255,255,255,0.94); border-width: 1px; border-color: #ffffff; }
+.root .panel-cap { flex-direction: row; align-items: center; height: 24px; flex-shrink: 0; }
+.root .accent-mark { width: 5px; height: 18px; border-radius: 3px; background-color: #28bda1; margin-right: 10px; }
+.root .panel-eyebrow { font-size: 10px; color: #6c829b; letter-spacing: 1px; }
+.root .panel-title { font-size: 28px; color: #1b2a43; margin-top: 10px; }
+.root .panel-subtitle { font-size: 14px; color: #60728c; margin-top: 12px; }
+.root .divider { height: 1px; flex-shrink: 0; background-color: #e7edf6; margin-top: 21px; margin-bottom: 20px; }
+.root .panel-label { font-size: 10px; color: #667991; letter-spacing: 1px; }
+.root .panel-value { font-size: 17px; color: #25354e; margin-top: 7px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.root .prediction-text { font-size: 13px; color: #7c8aa0; margin-top: 5px; }
+.root .prob-line { height: 59px; flex-direction: row; align-items: center; justify-content: space-between; flex-shrink: 0; margin-top: 8px; }
+.root .prob-description { font-size: 13px; color: #60728c; }
+.root .prob-number { font-size: 35px; color: #2677ed; }
+.root .bar-track { height: 7px; flex-shrink: 0; border-radius: 4px; background-color: #e8eef7; overflow: hidden; }
+.root .bar-fill { height: 7px; background-color: #3985ff; border-radius: 4px; }
+.root .mode-card { height: 82px; flex-shrink: 0; background-color: #edf4ff; border-radius: 18px; padding: 15px; margin-top: 23px; }
+.root .mode-focus { background-color: #eaf7f2; }
+.root .mode-title { font-size: 17px; color: #203b60; }
+.root .mode-sub { font-size: 11.5px; color: #657b98; margin-top: 6px; }
+.root .button-row { height: 45px; flex-direction: row; flex-shrink: 0; margin-top: 12px; }
+.root .panel-button { flex-basis: 0; flex-grow: 1; flex-shrink: 1; border-radius: 13px; background-color: #edf3fc; color: #3773c8; font-size: 12px; }
+.root .panel-button-primary { flex-basis: 0; flex-grow: 1; flex-shrink: 1; margin-left: 10px; border-radius: 13px; background-color: #2275f5; color: white; font-size: 13px; }
+.root .panel-button-primary:hover, .root .phone-page-primary:hover { background-color: #1663da; }
+.root .panel-button-primary:active, .root .phone-page-primary:active { background-color: #0c50c3; }
+.root .explanation-box { height: 130px; flex-shrink: 0; padding-top: 20px; }
+.root .info-row { height: 53px; flex-direction: row; align-items: flex-start; flex-shrink: 0; }
+.root .info-number { font-size: 12px; color: #9aacc5; width: 28px; padding-top: 2px; }
+.root .info-copy { flex-grow: 1; min-width: 0; }
+.root .info-title { font-size: 12.5px; color: #425874; }
+.root .info-label { font-size: 10.5px; color: #687d98; margin-top: 4px; }
+.root .diagnostic-details { height: 130px; flex-shrink: 0; padding-top: 18px; }
+.root .diagnostic-file { font-size: 12px; color: #455e7a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.root .diagnostic-text { font-size: 12px; color: #455e7a; margin-top: 3px; }
+.root .diagnostic-note { font-size: 11px; color: #687d98; margin-top: 6px; }
+.root .diagnostic-summary { font-size: 12px; color: #8090a6; margin-top: auto; }
+.root .details-button { height: 35px; font-size: 13px; color: #3d78cb; -unity-text-align: middle-left; margin-top: 6px; border-radius: 8px; }
+.root .footer { height: 30px; font-size: 11px; color: #94a0b2; -unity-text-align: middle-center; }
+/* App pages are still interactive demo views, with in-phone feedback. */
+.root .phone-page-back { height: 44px; color: #2473ee; font-size: 16px; -unity-text-align: middle-left; border-radius: 12px; padding-left: 8px; }
+.root .phone-page-title { font-size: 29px; margin-top: 8px; color: #172a46; }
+.root .phone-page-sub { font-size: 12px; color: #7a8ba4; margin-top: 7px; margin-bottom: 20px; }
+.root .directory-item { height: 65px; margin-bottom: 8px; padding: 9px 14px; flex-direction: row; align-items: center; background-color: #ffffff; border-radius: 18px; }
+.root .directory-icon { width: 43px; height: 43px; margin-right: 14px; }
+.root .directory-label { flex-grow: 1; font-size: 17px; }
+.root .phone-page-item { min-height: 67px; margin-bottom: 10px; padding: 14px; flex-direction: row; align-items: center; border-radius: 18px; background-color: #ffffff; }
+.root .phone-page-item-label { flex-grow: 1; flex-shrink: 1; min-width: 0; font-size: 15px; white-space: normal; }
+.root .page-feedback { font-size: 14px; color: #7386a2; white-space: normal; margin: 14px 6px; }
+.root .phone-page-primary { height: 52px; border-radius: 17px; background-color: #2275f5; color: white; font-size: 16px; margin-top: 12px; }
+.root.compact .frame { padding-left: 20px; padding-right: 20px; }
+.root.compact .phone-side { margin-right: 0; }
+.root.compact .brand { font-size: 19px; letter-spacing: 1px; }
+.root.compact .sub-brand { font-size: 12px; }
+.root.compact .top-status { display: none; }
+.root.compact .footer { font-size: 9px; white-space: normal; }
